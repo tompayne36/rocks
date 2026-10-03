@@ -886,22 +886,22 @@ void overlay_2Dfunction(WTwindow *win, FLAG eye)
 	{
 		pos  [0][X] = 0.0f;
 		pos  [0][Y] = 0.0f;
-		posuv[0][X] = 0.0f;
+		posuv[0][X] = 1.0f;
 		posuv[0][Y] = 0.0f;
 
 		pos  [1][X] = 0.0f;
 		pos  [1][Y] = 0.1f;
-		posuv[1][X] = 0.0f;
+		posuv[1][X] = 1.0f;
 		posuv[1][Y] = 1.0f;
 
 		pos  [2][X] = 0.2f;
 		pos  [2][Y] = 0.1f;
-		posuv[2][X] = 1.0f;
+		posuv[2][X] = 0.0f;
 		posuv[2][Y] = 1.0f;
 
 		pos  [3][X] = 0.2f;
 		pos  [3][Y] = 0.0f;
-		posuv[3][X] = 1.0f;
+		posuv[3][X] = 0.0f;
 		posuv[3][Y] = 0.0f;
 
 		WTwindow_draw2Dtexture(win, "logo3r", TRUE, pos, posuv);

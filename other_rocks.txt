@@ -1,0 +1,29 @@
+Astrorock:
+
+Astrorock is a colorful blast from the past. It strongly resembles an arcade classic called Asteroids, and if you've ever spent any time blasting meteors and aliens in that game, you'll definitely feel right at home playing this cosmic shooter. AstroRock challenges you to earn points by maneuvering a ship through space while avoiding collisions and blasting objects into tiny pieces before they shoot you. The game offers stunning color with detailed 3-D graphics, and a heart-thumping acoustic experience with voice commentary and a rock 'n' roll soundtrack. 
+
+ftp://ftp.download.com/pub/win95/games/astrock.zip (10M)
+
+Megaroids:
+
+Asteroids on steroids with 3D rendered graphics 
+
+ftp://ftp.winsite.com/pub/pc/win95/games/megard11.exe (934K)
+
+Winroids:
+
+A version of "Asteroids" w/ ray-traced graphics 
+
+ftp://ftp.winsite.com/pub/pc/win3/games/wroids21.zip (429K)
+
+TC Asteroids:
+
+TC Asteroids is a 3D shoot-em-up game 
+
+ftp://ftp.winsite.com/pub/pc/win3/games/aster107.zip (169K)
+
+Windows Asteroids:
+
+Wasteroids 1.0 is a Windows based asteroids game 
+
+ftp://ftp.winsite.com/pub/pc/win3/games/wast.zip (729K)

@@ -1,0 +1,17 @@
+.DS_Store
+*.o
+rocks-ng
+build/
+node_modules/
+three/
+
+# Legacy generated Visual C++ artifacts and binaries
+*.dll
+*.exe
+*.exp
+*.ilk
+*.lib
+*.mdp
+*.ncb
+*.opt
+*.plg

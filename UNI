@@ -1,0 +1,11 @@
+mat
+version 3.00
+valid ambient diffuse specular shininess emission opacity
+
+matdef // id 0
+ambient 0.000000 0.000000 0.000000
+diffuse 0.000000 0.000000 0.000000
+specular 0.000000 0.000000 0.000000
+shininess 0.000000
+emission 0.00000 0.00000 0.00000
+opacity 1.000000

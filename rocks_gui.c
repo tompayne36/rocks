@@ -162,8 +162,10 @@ int main(int argc, char *argv[])
 	WTviewpoint_setparallax(inview, 0.05f * UNIVERSE_SIZE);
 	WTviewpoint_setparallax(outview, 0.05f * UNIVERSE_SIZE);
 
-	/* start inside the ship */
-	toggleview(NULL, NULL);
+	/* Start explicitly inside the ship.  Do not depend on the previous
+	   value of cockpitView or toggle state during initialization. */
+	cockpitView = TRUE;
+	WTwindow_setviewpoint(win, inview);
 
 	/* display special key functions */
 	display_keys();
@@ -635,6 +637,14 @@ void makeexplosion(WTp3 pos, FLAG shipflag)
 void makerocks(int numrocks)
 {
 	int x;
+	WTp3 ship_pos;
+	const float rock_size = 15.0f;
+	const float safe_spawn_distance = INITSHIELDRADIUS + rock_size / 2.0f + 5.0f;
+
+	WTp3_init(ship_pos);
+	if (myShip != NULL)
+		WTnode_gettranslation(myShip, ship_pos);
+
 	WTmessage("Creating %d Space Rocks\n",numrocks);
 	for (x=0; x<numrocks;x++)
 	{
@@ -644,9 +654,7 @@ void makerocks(int numrocks)
 		pos[Y] = (float) myrand(UNIVERSE_SIZE);
 		pos[Z] = (float) myrand(UNIVERSE_SIZE);
 		
-		while ( sqrt( pos[X]*pos[X] +
-			      pos[Y]*pos[Y] +
-		                              pos[Z]*pos[Z] ) < 10.0f)
+		while (WTp3_distance(pos, ship_pos) < safe_spawn_distance)
 		{
 			pos[X] = (float) myrand(UNIVERSE_SIZE);
 			pos[Y] = (float) myrand(UNIVERSE_SIZE);
@@ -661,7 +669,7 @@ void makerocks(int numrocks)
 		ang[Y] = (float) myrand(5.0f);
 		ang[Z] = (float) myrand(5.0f);
 
-		newrock(RockRoot, pos, dir, ang, 15.0f);
+		newrock(RockRoot, pos, dir, ang, rock_size);
 	}
 
 }

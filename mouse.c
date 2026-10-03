@@ -41,7 +41,9 @@ void mouse_myupdate(WTsensor *sensor)
 
 
 	if (ThreeDVersion)
-		pitch =    y1 * speed * sens * deltaT();
+		/* Screen Y decreases upward, while positive local X rotation pitches
+		   the ship downward in the WTK-NG coordinate system. */
+		pitch =   -y1 * speed * sens * deltaT();
 	else
 		pitch = 0.0f;
 

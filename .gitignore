@@ -2,6 +2,7 @@
 *.o
 rocks-ng
 build/
+dist/
 node_modules/
 three/
 

@@ -29,6 +29,20 @@ make WTK_NG_DIR=/path/to/wtk-ng
 
 See `readme.txt` for the original game documentation and controls.
 
+## Create a self-contained macOS app
+
+On a Mac, build an application bundle with its game assets and SDL2 and
+libjpeg libraries:
+
+```sh
+make dist-macos
+```
+
+The ZIP is written to `dist/SpaceRocks-macOS-<architecture>.zip`. Unzip it and
+open `Space Rocks.app`. The archive uses an ad-hoc signature, not an Apple
+Developer ID signature; on first launch, macOS may require Control-clicking
+the app and choosing **Open**. The filename identifies the build architecture.
+
 ## Windows (64-bit)
 
 Install [MSYS2](https://www.msys2.org/) and open its **UCRT64** shell. Update

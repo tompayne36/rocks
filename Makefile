@@ -18,7 +18,7 @@ WTK_NG_DIR ?= ../wtk-ng
 GAME_SOURCES := rocks_gui.c misc.c gui.c mouse.c sensor.c network.c readini.c
 GAME_OBJECTS := $(GAME_SOURCES:.c=.o)
 WTK_NG_LIBRARY := $(WTK_NG_DIR)/libwtk-ng.a
-.PHONY: all clean run
+.PHONY: all clean run dist-macos
 
 all: $(TARGET)
 
@@ -33,6 +33,9 @@ $(WTK_NG_LIBRARY):
 
 run: $(TARGET)
 	./$(TARGET) -w
+
+dist-macos: rocks-ng
+	./scripts/package-macos.sh
 
 clean:
 	rm -f $(GAME_OBJECTS) rocks-ng rocks-ng.exe
